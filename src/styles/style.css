@@ -1,0 +1,28 @@
+@media only screen and (max-width: 768px) {
+    .navbar{
+        justify-content: space-between;
+    }
+    .form-control{
+        width: 10em;
+    }
+    .img_nav{
+        width: 1.6em;
+    }
+    .navbar-toggler{
+        width: 1.6em;
+        border: 0;
+        padding-left: 0;
+    }
+}
+@media only screen and (min-width: 1000px) {
+    .form-control{
+        width: 30em!important;
+    }
+    .navbar{
+        display: grid;
+        justify-content: center;
+        align-items: center;
+        justify-items: center;
+    }
+}
+    
