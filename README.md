@@ -5,13 +5,13 @@
 - [x] Producto -> Felipe
 - [x] Seguimiento -> Sergio
 - [x] carrito -> Sergio
-- [ ] Quienes somos -> Felipe
-- [ ] Pagina de perfil -> Sergio
-- [ ] Pagina admin -> Sergio
-	- [ ] CRUD producto
-	- [ ] CRUD cliente
-- [ ] Vendedor pagina de venta -> Felipe
-- [ ] Subscripcion pagina -> Felipe
+- [x] Quienes somos -> Felipe
+- [x] Pagina de perfil -> Sergio
+- [x] Pagina admin -> Sergio
+	- [x] CRUD producto
+	- [x] CRUD cliente
+- [x] Vendedor pagina de venta -> Felipe
+- [x] Subscripcion pagina -> Felipe
 ### Lista de objetivos PAGINA
-- [ ] Index -> Sergio
-- [ ] Quienes Somos -> Felipe
+- [x] Index -> Sergio
+- [x] Quienes Somos -> Felipe
