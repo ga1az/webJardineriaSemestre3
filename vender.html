@@ -14,7 +14,7 @@
             integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
             crossorigin="anonymous"
         />
-        <link rel="stylesheet" href="./src/styles/carrito.css" />
+        <link rel="stylesheet" href="./src/styles/vender.css" />
         <title>Document</title>
     </head>
     <body>
@@ -71,101 +71,87 @@
             </div>
         </nav>
         <div class="d-md-flex justify-content-around">
-            <div>
-                <p class="text-dark text-monospace h3 mt-3">
-                    CARRITO DE COMPRAS
-                </p>
-                <hr />
-                <div class="d-flex">
-                    <img
-                        src="./src/img/index img/ActualNaranjo-OPT02_1024x1024.jpg"
-                        alt=""
-                        class="img-carrito"
-                    />
-                    <div class="info-carrito">
-                        <p>Macetero naranjo</p>
-                        <p class="text-secondary">Nuevo</p>
-                        <select name="cantidad" id="">
-                            <option value="1" label="1">1</option>
-                            <option value="2" label="2">2</option>
-                            <option value="3" label="3">3</option>
-                            <option value="4" label="4">4</option>
-                            <option value="5" label="5">5</option>
-                            <option value="6" label="6">6</option>
-                        </select>
-                        <div class="d-flex">
-                            <span class="text-danger font-weight-bold">$</span>
-                            <p class="text-danger precio-carrito">5000</p>
-                        </div>
+            <div class="compra mt-5">
+                <div class="direccion">
+                    <p class="h3 text-monospace">PUBLICAR PRODUCTO</p>
+                    <div class="form-direccion">
+                        <form>
+                            <div class="form-group">
+                                <label for="inputAddress">Nombre</label>
+                                <input
+                                    type="text"
+                                    class="form-control w-100"
+                                    id="inputAddress"
+                                    required
+                                    min="3"
+                                    placeholder="Nomre producto"
+                                />
+                            </div>
+                            <div class="form-group">
+                                <label for="inputAddress2">Fotografia</label>
+                                <input
+                                    type="file"
+                                    class="form-control w-100 input-file"
+                                    required
+                                    id="inputAddress2"
+                                />
+                            </div>
+                            <div class="form-row">
+                                <div class="form-group col-md-6">
+                                    <label for="inputCity">Precio</label>
+                                    <input
+                                        type="numebr"
+                                        class="form-control w-100"
+                                        id="inputCity"
+                                        required
+                                        min="1"
+                                        placeholder="$45345"
+                                    />
+                                </div>
+                                <div class="form-group col-md-4">
+                                    <label for="inputState">Ciudad</label>
+                                    <select
+                                        id="inputState"
+                                        class="form-control w-100"
+                                    >
+                                        <option selected>Santiago</option>
+                                        <option>Concepcion</option>
+                                    </select>
+                                </div>
+                                <div class="form-group col-md-2">
+                                    <label for="inputZip">Cantidad</label>
+                                    <input
+                                        type="number"
+                                        class="form-control w-100"
+                                        id="inputZip"
+                                        required
+                                        min="1"
+                                        placeholder="Cantidad a vender"
+                                    />
+                                </div>
+                                <div class="form-group col-md-12 col-12">
+                                    <label for="inputAddress2"
+                                        >Descripcion</label
+                                    >
+                                    <textarea
+                                        name=""
+                                        id=""
+                                        cols="100"
+                                        rows="10"
+                                        class="form-control"
+                                    ></textarea>
+                                </div>
+                            </div>
+                            <button type="submit" class="btn btn-primary">
+                                Publicar
+                            </button>
+                        </form>
                     </div>
-                </div>
-                <hr />
-                <div class="d-flex">
-                    <img
-                        src="./src/img/index img/618CEBOLLINBARLETTA_large.jpg"
-                        alt=""
-                        class="img-carrito"
-                    />
-                    <div class="info-carrito">
-                        <p>Semilla de cebolla</p>
-                        <p class="text-secondary">Nuevo</p>
-                        <select name="cantidad" id="">
-                            <option value="1" label="1">1</option>
-                            <option value="2" label="2">2</option>
-                            <option value="3" label="3">3</option>
-                            <option value="4" label="4">4</option>
-                            <option value="5" label="5">5</option>
-                            <option value="6" label="6">6</option>
-                        </select>
-                        <div class="d-flex">
-                            <span class="text-danger font-weight-bold">$</span>
-                            <p class="text-danger precio-carrito">5000</p>
-                        </div>
-                    </div>
-                </div>
-                <hr />
-            </div>
-            <div class="res-ped">
-                <p class="text-dark text-monospace h5">RESUMEN DE TU PEDIDO</p>
-                <hr />
-                <div class="d-flex justify-content-around">
-                    <p class="">Subtotal</p>
-                    <div class="d-flex">
-                        <span class="text-danger font-weight-bold">$</span>
-                        <p class="text-danger font-weight-bold">10000</p>
-                    </div>
-                </div>
-                <hr />
-                <div class="d-flex d-flex justify-content-around">
-                    <p>Envio</p>
-                    <div>
-                        <p class="text-danger font-weight-bold">Envio gratis</p>
-                    </div>
-                </div>
-                <hr />
-                <div class="d-flex d-flex justify-content-around">
-                    <input
-                        type="text"
-                        placeholder="Aplicar cupon o descuento"
-                    />
-                </div>
-                <hr />
-                <div class="d-flex d-flex justify-content-around">
-                    <p>Total</p>
-                    <div class="d-flex">
-                        <span class="text-danger font-weight-bold">$</span>
-                        <p class="text-danger font-weight-bold">10000</p>
-                    </div>
-                </div>
-                <div class="d-flex justify-content-center mt-5 mb-5">
-                    <a href="./compra.html" class="btn-warning btn w-75"
-                        >Procesar Compra</a
-                    >
                 </div>
             </div>
         </div>
 
-        <footer class="bg-light text-center text-lg-start footer-style">
+        <footer class="bg-light text-center text-lg-start footer-style mt-5">
             <div
                 class="text-center p-3"
                 style="background-color: rgba(0, 0, 0, 0.2)"

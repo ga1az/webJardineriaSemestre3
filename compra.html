@@ -14,7 +14,7 @@
             integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
             crossorigin="anonymous"
         />
-        <link rel="stylesheet" href="/src/styles/compra.css" />
+        <link rel="stylesheet" href="./src/styles/compra.css" />
         <title>Document</title>
     </head>
     <body>
@@ -30,8 +30,8 @@
             >
                 <i class="bi bi-list text-white"></i>
             </a>
-            <a class="navbar-brand" href="/index.html">
-                <img class="img_nav" src="/src/img-qs/image 2.png" alt="" />
+            <a class="navbar-brand" href="./index.html">
+                <img class="img_nav" src="./src/img-qs/image 2.png" alt="" />
             </a>
             <form class="form-inline">
                 <input
@@ -39,6 +39,7 @@
                     type="search"
                     placeholder="Buscar Producto"
                     aria-label="Search"
+                    required
                 />
                 <button
                     class="btn btn-outline-light my-2 my-sm-0 btn-nav"
@@ -58,12 +59,12 @@
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link text-white" href="#">
+                        <a class="nav-link text-white" href="./carrito.html">
                             <i class="bi bi-cart"></i> Carrito
                         </a>
                     </li>
                     <li class="nav-item dropdown">
-                        <a class="nav-link text-white" href="#">
+                        <a class="nav-link text-white" href="./pedidos.html">
                             <i class="bi bi-truck"></i> Mis pedidos
                         </a>
                     </li>
@@ -75,14 +76,17 @@
                 <div class="direccion">
                     <p class="h3 text-monospace">Direccion de envio</p>
                     <div class="form-direccion">
-                        <form>
+                        <form name="form-direc">
                             <div class="form-group">
                                 <label for="inputAddress">Avenida/calle</label>
                                 <input
                                     type="text"
+                                    name="calle"
                                     class="form-control w-100"
                                     id="inputAddress"
                                     placeholder="1234 Main St"
+                                    required
+                                    min="5"
                                 />
                             </div>
                             <div class="form-group">
@@ -90,8 +94,11 @@
                                 <input
                                     type="text"
                                     class="form-control w-100"
+                                    name="numero"
                                     id="inputAddress2"
                                     placeholder="E122"
+                                    required
+                                    min="8"
                                 />
                             </div>
                             <div class="form-row">
@@ -101,6 +108,9 @@
                                         type="text"
                                         class="form-control w-100"
                                         id="inputCity"
+                                        name="region"
+                                        required
+                                        min="3"
                                     />
                                 </div>
                                 <div class="form-group col-md-4">
@@ -108,6 +118,8 @@
                                     <select
                                         id="inputState"
                                         class="form-control w-100"
+                                        required
+                                        name="ciudad"
                                     >
                                         <option selected>Santiago</option>
                                         <option>Concepcion</option>
@@ -119,11 +131,14 @@
                                         type="text"
                                         class="form-control w-100"
                                         id="inputZip"
+                                        required
+                                        name="zip"
+                                        min="3"
                                     />
                                 </div>
                             </div>
                             <button type="submit" class="btn btn-primary">
-                                Sign in
+                                Guardar
                             </button>
                         </form>
                     </div>
@@ -131,7 +146,7 @@
                 <div class="direccion mt-5">
                     <p class="h3 text-monospace">Forma de pago</p>
                     <div class="form-direccion">
-                        <form>
+                        <form name="forma-pago">
                             <div class="form-group">
                                 <label for="nombre-tarjeta"
                                     >Nombre titular</label
@@ -140,7 +155,10 @@
                                     type="text"
                                     class="form-control w-100"
                                     id="nombre-tarjeta"
+                                    name="nombre"
                                     placeholder="Nombre tarjeta"
+                                    required
+                                    min="3"
                                 />
                             </div>
                             <div class="form-group">
@@ -149,7 +167,10 @@
                                     type="text"
                                     class="form-control w-100"
                                     id="tarjeta"
+                                    name="tarjeta"
                                     placeholder="xxxx-xxxx-xxxx-xxxx"
+                                    required
+                                    min="16"
                                 />
                             </div>
                             <div class="form-row">
@@ -160,6 +181,8 @@
                                     <select
                                         id="inputState"
                                         class="form-control w-100"
+                                        required
+                                        name="mes"
                                     >
                                         <option selected>1</option>
                                         <option>2</option>
@@ -172,6 +195,8 @@
                                     <select
                                         id="inputState"
                                         class="form-control w-100"
+                                        required
+                                        name="anio"
                                     >
                                         <option selected>1990</option>
                                         <option>1992</option>
@@ -183,9 +208,15 @@
                                         type="text"
                                         class="form-control w-100"
                                         id="inputZip"
+                                        required
+                                        name="cvv"
+                                        min="3"
                                     />
                                 </div>
                             </div>
+                            <button type="submit" class="btn btn-primary">
+                                Guardar
+                            </button>
                         </form>
                     </div>
                 </div>
@@ -223,7 +254,7 @@
                     </div>
                 </div>
                 <div class="d-flex justify-content-center mt-5 mb-5">
-                    <a href="./compra.html" class="btn-danger btn w-75"
+                    <a id="btn-fin" class="btn-danger btn w-75"
                         >Finalizar compra</a
                     >
                 </div>
@@ -267,5 +298,6 @@
             integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
             crossorigin="anonymous"
         ></script>
+        <script src="./src/js/compra.js"></script>
     </body>
 </html>
